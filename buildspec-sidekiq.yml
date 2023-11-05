@@ -20,6 +20,6 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:v$TIME_STAMP
       - echo Writing image definitions file...
-      - printf '[{"name":"sidekiq","imageUri":"%s"}]' $REPOSITORY_URI:v$TIME_STAMP > imagedefinitions-rails.json
+      - printf '[{"name":"sidekiq","imageUri":"%s"}]' $REPOSITORY_URI:v$TIME_STAMP > imagedefinitions-sidekiq.json
 artifacts:
     files: imagedefinitions-sidekiq.json
